@@ -1,0 +1,104 @@
+.content {
+  width: 1000px;
+  height: 630px;
+  background-color: #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  padding: 25px;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 29px;
+}
+
+.atualiza h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.atualiza p {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+.formulario {
+  flex: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* sombra suave */
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+.info-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas com largura igual */
+  gap: 20px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.formulario input,
+select {
+  width: 400px;
+  height: 50px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+
+.formulario label {
+  display: block;
+}
+
+.disable {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.enable {
+  background-color: #2563eb;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  height: 100px;
+  justify-content: end;
+  align-items: end;
+  gap: 30px;
+}
+
+button.cadastrar {
+  width: 190px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #ffff;
+  background-color: #2563eb;
+  border: none;
+  cursor: pointer;
+}
+
+button.cancelar {
+  width: 120px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #374151;
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+}

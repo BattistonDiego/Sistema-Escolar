@@ -1,0 +1,58 @@
+<div class="content">
+    <div class="top">
+        <div class="back" routerLink="/lista">
+            <img src="assets/svg/voltar.svg" alt="">
+            <p>Voltar</p>
+        </div>
+
+        <div class="atualiza">
+            <h1>{{ title }}</h1>
+            <p>{{ subtitle }}</p>
+        </div>
+    </div>
+
+
+    <div class="formulario">
+        <form [formGroup]="formulario" class="info-form">
+
+            <div class="collum1">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input id="nome" formControlName="nome" type="text" />
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" formControlName="email" type="email" />
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input id="telefone" formControlName="telefone" type="text" />
+                </div>
+            </div>
+
+            <div class="collum2">
+                <div>
+                    <label for="disciplina">Disciplina:</label>
+                    <input id="disciplina" formControlName="disciplina" type="text" />
+                </div>
+
+                <div class="status">
+                    <label for="status">Status:</label>
+                    <select class="select" id="status" formControlName="status">
+                        <option [value]="1">Ativo</option>
+                        <option [value]="0">Inativo</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="buttons">
+            <button type="submit" class="cancelar">Cancelar</button>
+            <button (click)="salvarProfessor()" class="cadastrar" type="submit" [disabled]="formulario.invalid">{{idUser
+                ?
+                "Atualizar professor" : "Cadastrar Professor"}}</button>
+        </div>
+    </div>
+</div>

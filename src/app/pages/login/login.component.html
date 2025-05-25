@@ -1,0 +1,41 @@
+<div class="content">
+    <div class="cont">
+        <div class="welcome">
+            <img src="assets/svg/icon-user.svg" alt="">
+            <h1>Bem-vindo(a) de volta</h1>
+            <p>Acesse sua conta para continuar</p>
+        </div>
+
+        <div class="formulario">
+            <form [formGroup]="formulario" (ngSubmit)="entrar()">
+
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input id="email" formControlName="email" type="email" />
+                </div>
+
+                <div class="senha">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" formControlName="senha" type="password" />
+                </div>
+
+                <div class="esqueceu">
+                    <label for="">
+                        <input type="checkbox" class="custom-checkbox">
+                        Lembrar-me
+                    </label>
+
+                    <p>Esqueceu a senha?</p>
+                </div>
+
+                <button type="submit" [ngClass]="formulario.invalid ? 'disable' : 'enable'"
+                    [disabled]="formulario.invalid">Entrar</button>
+            </form>
+        </div>
+
+        <div class="not-account">
+            Não tem uma conta? <p>Cadastre-se</p>
+        </div>
+
+    </div>
+</div>
